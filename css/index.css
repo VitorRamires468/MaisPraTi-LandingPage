@@ -212,3 +212,8 @@ footer span a {
   color: white;
   margin: 0 5px;
 }
+
+/*Marcador*/
+#cabecalho nav ul li#nav-item a#marcador {
+  color: white;
+}
