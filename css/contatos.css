@@ -39,7 +39,8 @@ body {
 
 #cabecalho nav#nav ul {
   list-style-type: none;
-  width: 200px;
+  width: 230px;
+  float: right;
 }
 #cabecalho nav ul li#nav-item {
   float: left;

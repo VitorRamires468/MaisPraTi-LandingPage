@@ -1,0 +1,67 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+body {
+  background: #000000;
+  color: white;
+}
+/*CABECalho*/
+.clear {
+  clear: both;
+}
+
+#cabecalho {
+  padding: 25px 130px;
+}
+
+#cabecalho #logo {
+  float: left;
+}
+
+#cabecalho #logo h2 a {
+  display: block;
+  width: 200px;
+  background-image: url(https://lumiere-a.akamaihd.net/v1/images/sw_nav_logo_mobile_659fef1a_1_99c6e87c.png?region=0,0,312,32);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  text-indent: -1000px;
+}
+
+#cabecalho nav#nav {
+  float: right;
+}
+
+#cabecalho nav#nav ul {
+  list-style-type: none;
+  width: 230px;
+  float: right;
+}
+#cabecalho nav ul li#nav-item {
+  float: left;
+  padding: 5px;
+}
+
+#cabecalho nav ul li#nav-item a {
+  text-decoration: none;
+  color: rgb(199, 195, 195);
+  display: block;
+  text-transform: uppercase;
+}
+
+#cabecalho nav ul li#nav-item a:hover {
+  color: white;
+}
+
+/*Marcador*/
+#cabecalho nav ul li#nav-item a#marcador {
+  color: white;
+}
