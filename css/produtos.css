@@ -61,6 +61,138 @@ body {
   color: white;
 }
 
+/*Cards*/
+
+div#container section#cards {
+  padding: 20px;
+  width: 850px;
+  margin: 0 auto;
+}
+
+div#container section#cards h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+div#container section#cards div#cards-superior .card {
+  float: left;
+  box-shadow: 3px 3px 3px gray;
+  border-radius: 10px;
+  width: 180px;
+  height: 200px;
+  margin-left: 20px;
+}
+
+div#container section#cards div#cards-superior .card a.comprar {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 210px;
+  width: 100px;
+}
+
+div#container section#cards div#cards-superior .card a.comprar:hover,
+div#container section#cards div#cards-inferior .card a.comprar:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: border 0.4s;
+}
+
+div#container section#cards div#cards-superior #card1 {
+  background-image: url(../img/outlaws.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#container section#cards div#cards-superior #card2 {
+  background-image: url(../img/hunters.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#container section#cards div#cards-superior #card3 {
+  background-image: url(../img/survivor.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#container section#cards div#cards-superior #card4 {
+  background-image: url(../img/lego.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#container section#cards div#cards-inferior .card {
+  float: left;
+  box-shadow: 3px 3px 3px gray;
+  border-radius: 10px;
+  width: 260px;
+  height: 300px;
+  margin-left: 20px;
+}
+
+div#container section#cards div#cards-inferior #card5 {
+  background-image: url(../img/oficial.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+div#container section#cards div#cards-inferior #card6 {
+  background-image: url(../img/cards.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+div#container section#cards div#cards-inferior #card7 {
+  background-image: url(../img/depot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+div#container section#cards div#cards-inferior .card a.comprar {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: white;
+  margin: 0 auto;
+  margin-top: 310px;
+  width: 100px;
+}
+/*Rodapé*/
+
+footer {
+  width: 1060px;
+  margin: 10px auto;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+footer p span {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+footer span a {
+  display: inline-block;
+  color: white;
+  margin: 0 5px;
+}
+
 /*Marcador*/
 #cabecalho nav ul li#nav-item a#marcador {
   color: white;
