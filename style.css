@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+h1 {
+  font-size: 40px;
+}
+
 body {
   background: #000000;
   color: white;
@@ -72,6 +76,7 @@ div#container section#resumo h1 {
 }
 
 div#container section#resumo p {
+  font-size: 20px;
   line-height: 25px;
   text-align: justify;
 }
@@ -112,6 +117,7 @@ div#container .modal .modal-conteudo {
   text-decoration: none;
   cursor: pointer;
 }
+/*Fim Modal*/
 
 div#container section#resumo a#saber-mais {
   display: block;
@@ -129,7 +135,7 @@ div#container section#resumo a#saber-mais {
 }
 
 div#container section#resumo a#saber-mais:hover {
-  background-color: gray;
+  background-color: yellow;
 }
 
 /*Cards*/
@@ -142,11 +148,13 @@ div#container section#cards {
 
 div#container section#cards h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 div#container section#cards .card h3 {
   margin: 10px;
+  font-size: 25px;
+  text-shadow: 4px 4px 4px black;
 }
 
 div#container section#cards .card img {
@@ -180,4 +188,27 @@ div#container section#cards #card3 {
 
 div#container section#cards #card4 {
   float: right;
+}
+/*Rodapé*/
+
+footer {
+  width: 1060px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 20px;
+}
+
+footer p span {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+footer span a {
+  display: inline-block;
+  color: white;
+  margin: 0 5px;
 }

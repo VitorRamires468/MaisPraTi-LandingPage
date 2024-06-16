@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars</title>
     <link rel="stylesheet" href="style.css" />
+    <head>
+      <link rel="icon" href="img/icon.jpg" type="image/x-icon" />
+      <script
+        src="https://kit.fontawesome.com/9f98dbb267.js"
+        crossorigin="anonymous"
+      ></script>
+    </head>
   </head>
 
   <body>
     <header id="cabecalho">
       <div id="logo">
-        <h2><a href="#">Star Wars</a></h2>
+        <h2><a href="https://www.starwars.com/">Star Wars</a></h2>
       </div>
       <nav id="nav">
         <ul>
@@ -21,78 +28,102 @@
       </nav>
       <div class="clear"></div>
     </header>
-    <div id="container">
-      <section id="resumo">
-        <h1>Star wars</h1>
-        <p>
-          "Star Wars” é uma série de filmes de ficção científica criada por
-          George Lucas. A saga é centrada em um universo fictício de galáxias
-          distantes e conta a história da luta entre o bem e o mal, com
-          elementos de mitologia e política. Os personagens principais incluem
-          Jedi, que são guerreiros que usam a Força para o bem, e Sith, que usam
-          a Força para o mal. A série original começou com o filme “Star Wars:
-          Episódio IV - Uma Nova Esperança” em 1977 e se expandiu para incluir
-          trilogias prequela e sequela, além de filmes derivados e séries de
-          televisão.
-        </p>
-        <a href="#" id="saber-mais" onclick="saberMais()">Saber mais</a>
-      </section>
-      <div id="meuModal" class="modal">
-        <div class="modal-conteudo">
-          <span class="fechar" onclick="fecharModal()">&times;</span>
-          <p>Você será redirecionado para a página oficial</p>
+    <main>
+      <div id="container">
+        <section id="resumo">
+          <h1>Star wars</h1>
+          <p>
+            "Star Wars” é uma série de filmes de ficção científica criada por
+            George Lucas. A saga é centrada em um universo fictício de galáxias
+            distantes e conta a história da luta entre o bem e o mal, com
+            elementos de mitologia e política. Os personagens principais incluem
+            Jedi, que são guerreiros que usam a Força para o bem, e Sith, que
+            usam a Força para o mal. A série original começou com o filme “Star
+            Wars: Episódio IV - Uma Nova Esperança” em 1977 e se expandiu para
+            incluir trilogias prequela e sequela, além de filmes derivados e
+            séries de televisão.
+          </p>
+          <a href="#" id="saber-mais" onclick="saberMais()">Saber mais</a>
+        </section>
+        <div id="meuModal" class="modal">
+          <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <p>Você será redirecionado para a página oficial</p>
+          </div>
         </div>
+        <section id="cards">
+          <h1>Personagens Principais</h1>
+          <div id="cards-superior" style="margin-bottom: 30px">
+            <div class="card" id="card1">
+              <h3>Darth Vader</h3>
+              <img src="img/darthVader.jpg" alt="Imagen do Darth Vader" />
+              <p>
+                Darth Vader, antes Anakin Skywalker, é um personagem icônico de
+                Star Wars. Antigo Jedi heroico, seduzido pelo lado sombrio da
+                Força, tornou-se um poderoso Lorde Sith sob o Império Galáctico,
+                lutando contra a Aliança Rebelde.
+              </p>
+            </div>
+            <div class="card" id="card2">
+              <h3>Luke Skywalker</h3>
+              <img src="img/luky.jpg" alt="Imagems do Luke" />
+              <p>
+                Luke Skywalker, filho de Anakin Skywalker e Padme Amidala, é um
+                personagem central em Star Wars. Criado em Tatooine, tornou-se
+                um Jedi lendário, ajudou a derrubar o Império Galáctico e
+                descobriu a verdade sobre sua origem, terminando a tirania dos
+                Sith.
+              </p>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div id="cards-inferior">
+            <div class="card" id="card3">
+              <h3>Obi Wan</h3>
+              <img src="img/obi.jpg" alt="Imagem do Obi Wan" />
+              <p>
+                Obi-Wan Kenobi, mestre Jedi e mentor de Anakin e Luke Skywalker,
+                é um personagem central em Star Wars. Lutou na Guerra dos
+                Clones, viveu como eremita e ajudou a derrotar o Império, sendo
+                uma figura chave na formação e redenção de Darth Vader.
+              </p>
+            </div>
+            <div class="card" id="card4">
+              <h3>Yoda</h3>
+              <img src="img/yoda.jpg" alt="Imagen do Obi Wan" />
+              <p>
+                Yoda, um mestre Jedi lendário, é notável por sua sabedoria e
+                poderosa conexão com a Força. Pequeno em tamanho, mas influente,
+                treinou Jedi por mais de 800 anos, teve papéis cruciais nas
+                Guerras Clônicas e na formação de Luke Skywalker.
+              </p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </section>
       </div>
-      <section id="cards">
-        <h1>Personagens Principais</h1>
-        <div id="cards-superior" style="margin-bottom: 30px">
-          <div class="card" id="card1">
-            <h3>Darth Vader</h3>
-            <img src="img/darthVader.jpg" alt="Imagen do Darth Vader" />
-            <p>
-              Darth Vader, antes Anakin Skywalker, é um personagem icônico de
-              Star Wars. Antigo Jedi heroico, seduzido pelo lado sombrio da
-              Força, tornou-se um poderoso Lorde Sith sob o Império Galáctico,
-              lutando contra a Aliança Rebelde.
-            </p>
-          </div>
-          <div class="card" id="card2">
-            <h3>Luke Skywalker</h3>
-            <img src="img/luky.jpg" alt="Imagems do Luke" />
-            <p>
-              Luke Skywalker, filho de Anakin Skywalker e Padme Amidala, é um
-              personagem central em Star Wars. Criado em Tatooine, tornou-se um
-              Jedi lendário, ajudou a derrubar o Império Galáctico e descobriu a
-              verdade sobre sua origem, terminando a tirania dos Sith.
-            </p>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div id="cards-inferior">
-          <div class="card" id="card3">
-            <h3>Obi Wan</h3>
-            <img src="img/obi.jpg" alt="Imagem do Obi Wan" />
-            <p>
-              Obi-Wan Kenobi, mestre Jedi e mentor de Anakin e Luke Skywalker, é
-              um personagem central em Star Wars. Lutou na Guerra dos Clones,
-              viveu como eremita e ajudou a derrotar o Império, sendo uma figura
-              chave na formação e redenção de Darth Vader.
-            </p>
-          </div>
-          <div class="card" id="card4">
-            <h3>Yoda</h3>
-            <img src="img/yoda.jpg" alt="Imagen do Obi Wan" />
-            <p>
-              Yoda, um mestre Jedi lendário, é notável por sua sabedoria e
-              poderosa conexão com a Força. Pequeno em tamanho, mas influente,
-              treinou Jedi por mais de 800 anos, teve papéis cruciais nas
-              Guerras Clônicas e na formação de Luke Skywalker.
-            </p>
-          </div>
-          <div class="clear"></div>
-        </div>
-      </section>
-    </div>
+    </main>
+    <footer>
+      <p>
+        &copy; Todos os diretios reservados
+        <span id="links"
+          ><a href="https://www.instagram.com/starwars/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.tiktok.com/@starwars"
+            ><i class="fa-brands fa-tiktok"></i
+          ></a>
+          <a href="https://www.facebook.com/StarWars"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.youtube.com/user/starwars"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="https://twitter.com/starwars"
+            ><i class="fa-brands fa-x-twitter"></i></a
+        ></span>
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
