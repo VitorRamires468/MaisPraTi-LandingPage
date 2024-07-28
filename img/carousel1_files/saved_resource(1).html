@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://www.starwars.com/_did/?clientId=DI-STARWARS.WEB&environment=PROD -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disney ID</title>
+    <meta name="robots" content="noindex">
+    <script>
+        window.onload = function () {
+          const params = new URLSearchParams(window.location.search);
+          var script = document.createElement('script'),
+              cssOverride = params.get('cssOverride');
+          cssOverride = !cssOverride ? '' : '?cssOverride=' + cssOverride
+          script.type = "text/javascript";
+          script.src = "https://cdn.registerdisney.go.com/v4/responder.js" + cssOverride;
+          script.id = "oneid-script";
+          document.head.append(script);
+        };
+    </script>
+  <script type="text/javascript" src="./responder.js.baixados" id="oneid-script"></script></head>
+  <body>
+  
+
+</body></html>

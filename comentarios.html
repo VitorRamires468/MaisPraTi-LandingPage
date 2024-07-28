@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos</title>
+    <title>Comentários</title>
     <link rel="icon" href="img/icon.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="css/produtos.css" />
+    <link rel="stylesheet" href="css/contatos.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,6 +17,7 @@
       src="https://kit.fontawesome.com/9f98dbb267.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body id="body">
     <header>
@@ -51,7 +52,7 @@
                   <a class="nav-link" href="produtos.html">Produtos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="comentarios.html">Comentários</a>
+                  <a class="nav-link" href="#">Comentários</a>
                 </li>
               </ul>
             </div>
@@ -60,75 +61,38 @@
       </div>
     </header>
     <main>
-      <div id="container" class="container">
-        <section id="cards">
-          <div id="cards-superior">
-            <h1 class="title">JOGOS - Lançamentos</h1>
-            <div class="row justify-content-center me-2">
-              <div class="card col-auto col-md-3" id="card1">
-                <a
-                  href="https://www.starwars.com/games-apps/star-wars-outlaws"
-                  class="comprar"
-                  >Comprar</a
-                >
-              </div>
-              <div class="card col-auto col-md-3" id="card2">
-                <a
-                  href="https://www.starwars.com/games-apps/star-wars-hunters"
-                  class="comprar"
-                  >Comprar</a
-                >
-              </div>
+      <div id="formulario" class="container row justify-content-center">
+        <form class="col-auto col-md-4">
+          <input id="nome" type="text" placeholder="Nome" />
+          <br />
+          <textarea name="msg" id="mensagem"></textarea>
+          <br />
+          <button type="submit" onclick="sendMessage()">Enviar</button>
 
-              <div class="card col-auto col-md-3" id="card3">
-                <a
-                  href="https://www.starwars.com/games-apps/star-wars-jedi-survivor"
-                  class="comprar"
-                  >Comprar</a
-                >
-              </div>
-              <div class="card col-auto col-md-3" id="card4">
-                <a
-                  href="https://www.starwars.com/lego-star-wars-the-skywalker-saga"
-                  class="comprar"
-                  >Comprar</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="cards2">
-          <div id="cards-inferior">
-            <h1 class="title">APPS</h1>
-            <div class="row justify-content-center">
-              <div class="card col-auto col-md-4" id="card5">
-                <a
-                  href="https://www.starwars.com/games-apps/star-wars-app"
-                  class="comprar"
-                  >Baixar</a
-                >
-              </div>
-              <div class="card col-auto col-md-4" id="card6">
-                <a
-                  href="https://www.starwars.com/games-apps/star-wars-card-trader"
-                  class="comprar"
-                  >Baixar</a
-                >
-              </div>
-              <div class="card col-auto col-md-4" id="card7">
-                <a
-                  href="https://www.starwars.com/games-apps/droid-depot"
-                  class="comprar"
-                  >Baixar</a
-                >
-              </div>
-            </div>
-          </div>
-        </section>
+          <br /><br />
+          <textarea
+            class="new-message"
+            name="msg"
+            id="mensagem"
+            placeholder="new message"
+            data-id=""
+          ></textarea>
+          <button id="update" type="submit" onclick="sendUpdate()">Att</button>
+        </form>
+        <div class="comentarios col-auto col-md-6 p-2">
+          <table>
+            <thead>
+              <tr>
+                <td><h2>Comentários</h2></td>
+              </tr>
+            </thead>
+            <tbody id="lista-comentarios"></tbody>
+          </table>
+        </div>
       </div>
     </main>
-    <footer class="container mt-5">
-      <div class="row text-center mt-3">
+    <footer class="container-fluid">
+      <div class="row text-center">
         <p class="col-sm-6">Follow our medias</p>
         <div class="col-sm-6">
           <a href="#"> <i class="fa-brands fa-facebook me-2"></i></a>

@@ -1,129 +1,183 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Star Wars</title>
     <link rel="stylesheet" href="css/index.css" />
-    <head>
-      <link rel="icon" href="img/icon.jpg" type="image/x-icon" />
-      <script
-        src="https://kit.fontawesome.com/9f98dbb267.js"
-        crossorigin="anonymous"
-      ></script>
-    </head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/9f98dbb267.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/ajax.js"></script>
   </head>
-
-  <body>
-    <header id="cabecalho">
-      <div id="logo">
-        <h2><a href="https://www.starwars.com/">Star Wars</a></h2>
+  <body id="body">
+    <header>
+      <div class="container">
+        <nav id="nav" class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><img width="100" src="img/logo.png" alt=""
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Início</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="comentarios.html">Comentários</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-      <nav id="nav">
-        <ul>
-          <li id="nav-item"><a id="marcador" href="#">Home</a></li>
-          <li id="nav-item"><a href="produtos.html">Produtos</a></li>
-          <li id="nav-item"><a href="contatos.html">Contato</a></li>
-        </ul>
-      </nav>
-      <div class="clear"></div>
     </header>
     <main>
-      <div id="container">
-        <section id="resumo">
-          <h1>Star wars</h1>
-          <p>
-            "Star Wars” é uma série de filmes de ficção científica criada por
-            George Lucas. A saga é centrada em um universo fictício de galáxias
-            distantes e conta a história da luta entre o bem e o mal, com
-            elementos de mitologia e política. Os personagens principais incluem
-            Jedi, que são guerreiros que usam a Força para o bem, e Sith, que
-            usam a Força para o mal. A série original começou com o filme “Star
-            Wars: Episódio IV - Uma Nova Esperança” em 1977 e se expandiu para
-            incluir trilogias prequela e sequela, além de filmes derivados e
-            séries de televisão.
-          </p>
-          <a href="#" id="saber-mais" onclick="saberMais()">Saber mais</a>
-        </section>
-        <div id="meuModal" class="modal">
-          <div class="modal-conteudo">
-            <span class="fechar" onclick="fecharModal()">&times;</span>
-            <p>Você será redirecionado para a página oficial</p>
+      <section id="carousel">
+        <div id="carouselExample" class="carousel slide">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride=""
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/carousel1.jpeg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-block">
+                  <h3>Star wars acolyte</h3>
+                  <p>
+                    How the Acolyte challenges how we see some members of the
+                    jedi
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel2.jpeg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-block">
+                  <h3>Star wars acolyte</h3>
+                  <p>"The Acolyte" Episode Guide | The Acolyte</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/carousel3.jpeg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-block">
+                  <h3>Star wars acolyte</h3>
+                  <p>
+                    Past tragedies are revisited in the light of new truth, and
+                    a surprise choice leads the way to an uncertain future
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
-        <section id="cards">
-          <h1>Personagens Principais</h1>
-          <div id="cards-superior" style="margin-bottom: 30px">
-            <div class="card" id="card1">
-              <h3>Darth Vader</h3>
-              <img src="img/darthVader.jpg" alt="Imagen do Darth Vader" />
-              <p>
-                Darth Vader, antes Anakin Skywalker, é um personagem icônico de
-                Star Wars. Antigo Jedi heroico, seduzido pelo lado sombrio da
-                Força, tornou-se um poderoso Lorde Sith sob o Império Galáctico,
-                lutando contra a Aliança Rebelde.
-              </p>
+      </section>
+      <div class="container">
+        <section id="secao1" class="content">
+          <h1 class="title">Personagens Principais</h1>
+          <div class="top-content">
+            <div class="img">
+              <img src="img/darthVader.jpg" alt="" />
             </div>
-            <div class="card" id="card2">
-              <h3>Luke Skywalker</h3>
-              <img src="img/luky.jpg" alt="Imagems do Luke" />
-              <p>
-                Luke Skywalker, filho de Anakin Skywalker e Padme Amidala, é um
-                personagem central em Star Wars. Criado em Tatooine, tornou-se
-                um Jedi lendário, ajudou a derrubar o Império Galáctico e
-                descobriu a verdade sobre sua origem, terminando a tirania dos
-                Sith.
-              </p>
+            <div class="img">
+              <img src="img/obi.jpg" alt="" />
             </div>
-            <div class="clear"></div>
           </div>
-          <div id="cards-inferior">
-            <div class="card" id="card3">
-              <h3>Obi Wan</h3>
-              <img src="img/obi.jpg" alt="Imagem do Obi Wan" />
-              <p>
-                Obi-Wan Kenobi, mestre Jedi e mentor de Anakin e Luke Skywalker,
-                é um personagem central em Star Wars. Lutou na Guerra dos
-                Clones, viveu como eremita e ajudou a derrotar o Império, sendo
-                uma figura chave na formação e redenção de Darth Vader.
-              </p>
+          <div class="bottom-content">
+            <div id="img3" class="img">
+              <img src="img/yoda.jpg" alt="" />
             </div>
-            <div class="card" id="card4">
-              <h3>Yoda</h3>
-              <img src="img/yoda.jpg" alt="Imagen do Obi Wan" />
-              <p>
-                Yoda, um mestre Jedi lendário, é notável por sua sabedoria e
-                poderosa conexão com a Força. Pequeno em tamanho, mas influente,
-                treinou Jedi por mais de 800 anos, teve papéis cruciais nas
-                Guerras Clônicas e na formação de Luke Skywalker.
-              </p>
+            <div id="img4" class="img">
+              <img src="img/luky.jpg" alt="" />
             </div>
-            <div class="clear"></div>
           </div>
+        </section>
+        <section class="content-tabs">
+          <div class="abas">
+            <a
+              class="tab1"
+              onclick="request('./tabs/tab1.html');lastPage = 'tab1'"
+              >Acolyte</a
+            >
+            <a
+              class="tab2"
+              onclick="request('./tabs/tab2.html');lastPage = 'tab2'"
+              >Outlaws</a
+            >
+            <a
+              class="tab3"
+              onclick="request('./tabs/tab3.html');lastPage = 'tab3'"
+              >Hunters</a
+            >
+          </div>
+          <div class="page-content"></div>
         </section>
       </div>
     </main>
-    <footer>
-      <p>
-        &copy; Todos os diretios reservados
-        <span id="links"
-          ><a href="https://www.instagram.com/starwars/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-          <a href="https://www.tiktok.com/@starwars"
-            ><i class="fa-brands fa-tiktok"></i
-          ></a>
-          <a href="https://www.facebook.com/StarWars"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-          <a href="https://www.youtube.com/user/starwars"
-            ><i class="fa-brands fa-youtube"></i
-          ></a>
-          <a href="https://twitter.com/starwars"
-            ><i class="fa-brands fa-x-twitter"></i></a
-        ></span>
-      </p>
+    <footer class="container mt-5">
+      <div class="row text-center mt-3">
+        <p class="col-sm-6">Follow our medias</p>
+        <div class="col-sm-6">
+          <a href="#"> <i class="fa-brands fa-facebook me-2"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok me-2"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram me-2"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter me-2"></i></a>
+        </div>
+      </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

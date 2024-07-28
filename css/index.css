@@ -5,216 +5,284 @@
   padding: 0;
 }
 
-h1 {
-  font-size: 40px;
+body#body {
+  background-color: black;
 }
 
-body {
-  background: #000000;
-  color: white;
-}
-/*CABECalho*/
-.clear {
-  clear: both;
-}
-
-#cabecalho {
-  padding: 25px 130px;
-}
-
-#cabecalho #logo {
-  float: left;
-}
-
-#cabecalho #logo h2 a {
-  display: block;
-  width: 200px;
-  background-image: url(https://lumiere-a.akamaihd.net/v1/images/sw_nav_logo_mobile_659fef1a_1_99c6e87c.png?region=0,0,312,32);
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-decoration: none;
-  text-indent: -1000px;
-}
-
-#cabecalho nav#nav {
-  float: right;
-}
-
-#cabecalho nav#nav ul {
-  list-style-type: none;
-  width: 230px;
-  float: right;
-}
-#cabecalho nav ul li#nav-item {
-  float: left;
-  padding: 5px;
-}
-
-#cabecalho nav ul li#nav-item a {
-  text-decoration: none;
-  color: rgb(199, 195, 195);
-  display: block;
+body header nav#nav li a {
   text-transform: uppercase;
-}
-
-#cabecalho nav ul li#nav-item a:hover {
   color: white;
 }
-
-/*Conteudo*/
-div#container {
-  width: 1060px;
-  margin: 0 auto;
-  padding: 20px;
+body header nav#nav li a:hover {
+  color: gray;
+}
+h1.title {
+  color: white;
+  text-align: center;
 }
 
-div#container section#resumo {
-  padding: 10px;
+section.content {
+  display: flex;
+  justify-content: center;
 }
 
-div#container section#resumo h1 {
-  margin: 10px;
-}
-
-div#container section#resumo p {
-  font-size: 20px;
-  line-height: 25px;
-  text-align: justify;
-}
-
-/*Modal*/
-div#container .modal {
-  font-size: 20px;
-  display: none;
-  position: fixed;
-  color: #000000;
-  z-index: 1;
-  left: 440px;
-  top: 200px;
-  width: 400px;
+section.content div.top-content div,
+section.content div.bottom-content div {
   background-color: white;
-  border-radius: 10px;
-  opacity: 0.9;
 }
 
-div#container .modal .modal-conteudo {
-  margin: 15px auto;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #888;
-  width: 80%;
+section#secao1 div img {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
 }
 
-.fechar {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/*Abas*/
+.content-tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  background: rgb(0, 0, 0);
+  margin: 1rem auto;
 }
 
-.fechar:hover,
-.fechar:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.abas {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  width: 25rem;
+  margin: 0px auto;
 }
-/*Fim Modal*/
 
-div#container section#resumo a#saber-mais {
+.tab1,
+.tab2,
+.tab3 {
   display: block;
-  width: 90px;
-  height: 20px;
-  padding: 5px;
-  margin: 15px 10px;
   text-decoration: none;
-  font-size: 15px;
+  height: 2.5rem;
+  width: 10rem;
+  line-height: 2.5rem;
+  margin-right: 1px;
+  text-align: center;
   text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: bold;
-  color: white;
-  border: 1px solid yellow;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px 10px 0 0;
+  color: rgb(66, 66, 66);
 }
 
-div#container section#resumo a#saber-mais:hover {
-  background-color: yellow;
+.content-tabs a:hover {
+  background-color: rgb(88, 99, 107);
+  transition: all 500ms ease-out;
 }
 
-/*Cards*/
+.actived {
+  background-color: rgb(82, 169, 228);
+}
 
-div#container section#cards {
-  padding: 20px;
-  width: 850px;
+.page-content {
+  width: 40rem;
+  height: 20rem;
   margin: 0 auto;
+  margin-top: 10px;
 }
 
-div#container section#cards h1 {
-  text-align: center;
-  margin-bottom: 25px;
+.content-tab iframe {
+  width: 100%;
+  height: 20rem;
+}
+@media (max-width: 576px) {
+  section.content {
+    flex-direction: column;
+  }
+  section#secao1 {
+    padding: 1.5rem;
+  }
+  section.content div.top-content,
+  section.content div.bottom-content {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-around;
+  }
+  section#secao1 div.img {
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 10px white;
+    width: 8rem;
+    height: 10rem;
+  }
+
+  /*Carousel*/
+  main section#carousel div#carouselExample div.carousel-inner img {
+    height: 22rem;
+  }
+  main section#carousel div#carouselExample div.carousel-inner h3,
+  main section#carousel div#carouselExample div.carousel-inner p {
+    color: rgba(196, 193, 193, 0.418);
+  }
+
+  /*Tabs*/
+  .content-tabs {
+    width: 20rem;
+  }
+  .abas {
+    width: 18rem;
+  }
+
+  .tab1,
+  .tab2,
+  .tab3 {
+    width: 6rem;
+  }
+
+  .page-content {
+    width: 18rem;
+  }
 }
 
-div#container section#cards .card h3 {
-  margin: 10px;
-  font-size: 25px;
-  text-shadow: 4px 4px 4px black;
+@media (min-width: 578px) {
+  section.content {
+    flex-wrap: wrap;
+  }
+  section#secao1 {
+    padding: 0.5rem;
+  }
+
+  section.content div.top-content,
+  section.content div.bottom-content {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-between;
+  }
+  section#secao1 div.top-content div.img,
+  section#secao1 div.bottom-content div.img {
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 10px white;
+    height: 23rem;
+  }
+
+  section.content div.bottom-content #img3,
+  section.content div.bottom-content #img4 {
+    width: 14rem;
+  }
+
+  /*Carousel*/
+  main section#carousel div#carouselExample div.carousel-inner img {
+    height: 22rem;
+  }
+
+  main section#carousel div#carouselExample div.carousel-inner h3 {
+    color: rgba(196, 193, 193, 0.418);
+    font-size: 2rem;
+  }
+
+  main section#carousel div#carouselExample div.carousel-inner p {
+    color: rgba(196, 193, 193, 0.418);
+    font-size: 1.3rem;
+  }
+  /*Tabs*/
+  .content-tabs {
+    width: 30rem;
+  }
+  .abas {
+    width: 24rem;
+  }
+
+  .tab1,
+  .tab2,
+  .tab3 {
+    width: 8rem;
+  }
+
+  .page-content {
+    width: 30rem;
+  }
 }
 
-div#container section#cards .card img {
-  width: 200px;
-  height: 250px;
-}
-div#container section#cards .card p {
-  text-align: justify;
-  margin: 5px;
+@media (min-width: 767px) {
+  section.content div.top-content,
+  section.content div.bottom-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  section#secao1 div.top-content div.img,
+  section#secao1 div.bottom-content div.img {
+    width: 19rem;
+    height: 19rem;
+  }
+
+  section.content div.bottom-content #img3,
+  section.content div.bottom-content #img4 {
+    width: 19rem;
+  }
+
+  /*Carousel*/
+  main section#carousel div#carouselExample div.carousel-inner h3 {
+    color: rgba(196, 193, 193, 0.418);
+    font-size: 2.4rem;
+  }
+
+  main section#carousel div#carouselExample div.carousel-inner p {
+    color: rgba(196, 193, 193, 0.418);
+    font-size: 1.4rem;
+  }
+
+  /*Tabs*/
+  .content-tabs {
+    width: 40rem;
+  }
+  .abas {
+    width: 30rem;
+  }
+
+  .tab1,
+  .tab2,
+  .tab3 {
+    width: 10rem;
+  }
+
+  .page-content {
+    width: 40rem;
+  }
 }
 
-div#container section#cards .card {
-  width: 343px;
-  box-shadow: 10px 10px 10px gray;
-  text-align: center;
-  border-radius: 15px;
-  background-color: white;
-  color: black;
-}
-div#container section#cards #card1 {
-  float: left;
+@media (min-width: 1024px) {
+  section#secao1 div.top-content div.img,
+  section#secao1 div.bottom-content div.img {
+    width: 25rem;
+    height: 28rem;
+  }
+
+  section.content div.bottom-content #img3,
+  section.content div.bottom-content #img4 {
+    width: 25rem;
+    height: 28rem;
+  }
+
+  /*Carousel*/
+  main section#carousel div#carouselExample div.carousel-inner img {
+    height: 70vh;
+  }
 }
 
-div#container section#cards #card2 {
-  float: right;
-}
-
-div#container section#cards #card3 {
-  float: left;
-}
-
-div#container section#cards #card4 {
-  float: right;
-}
-/*Rodapé*/
-
+/*footer*/
 footer {
-  width: 1060px;
-  margin: 10px auto;
-  padding: 20px;
-  text-align: center;
-}
-
-footer p {
-  font-size: 20px;
-}
-
-footer p span {
-  display: inline-block;
-  margin-left: 100px;
-}
-
-footer span a {
-  display: inline-block;
+  height: 5rem;
   color: white;
-  margin: 0 5px;
+  font-size: 2rem;
 }
 
-/*Marcador*/
-#cabecalho nav ul li#nav-item a#marcador {
+footer div a {
   color: white;
+}
+/*Marca página*/
+.actived {
+  background-color: rgb(147, 210, 252);
 }
